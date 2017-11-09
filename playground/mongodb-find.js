@@ -7,9 +7,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db)=>{
     }
     console.log('Connected to MongoDB server');
 
-    // db.collection('Todo').find({completed:false}).toArray().then((docs)=>{
-    // db.collection('Todo').find().count().then((count)=>{
-    // console.log(`Todo Count: ${count} `);
+    // db.collection('Todos').find({completed:false}).toArray().then((docs)=>{
+    // db.collection('Todos').find().count().then((count)=>{
+    // console.log(`Todos Count: ${count} `);
     db.collection('Users').find({name:'Jonas'}).toArray().then((docs)=>{
       console.log(JSON.stringify(docs, undefined,2));
     }, (err)=>{
