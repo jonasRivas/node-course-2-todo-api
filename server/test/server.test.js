@@ -107,7 +107,8 @@ describe('DELETE /todos/:id', ()=>{
       .delete(`/todos/${hecId}`)
       .expect(200)
       .expect((res)=>{
-        //return console.log('***********',res);
+        // process.env.MONGODB_URI = 'mongodb://localhost:27017/TodoApp';
+        // return console.log(process.env.MONGODB_URI);
         expect(res.body.todo._id).toBe(hecId);
       })
       .end((err, res)=>{
