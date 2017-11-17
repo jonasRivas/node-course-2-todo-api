@@ -6,6 +6,8 @@ const _ = require('lodash');
 var express = require('express');
 var bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
+const bcrypt =  require('bcryptjs');
+
 
 
 var {mongoose} = require('./db/mongoose.js');
